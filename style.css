@@ -1,0 +1,258 @@
+/* General Body and Layout Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    color: #212529;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+.infographic-container {
+    max-width: 900px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.infographic-header {
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: 700;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.infographic-header:before,
+.infographic-header:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    transition: border-color 0.3s ease;
+}
+
+.infographic-header:before {
+    border-width: 0 0 20px 20px;
+    border-color: transparent transparent var(--header-bg) transparent;
+    bottom: 0;
+    left: 0;
+}
+
+.infographic-header:after {
+    border-width: 20px 20px 0 0;
+    border-color: var(--header-bg) transparent transparent transparent;
+    top: 0;
+    right: 0;
+}
+
+.section {
+    padding: 30px 40px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.section-title {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    padding-bottom: 5px;
+    align-self: stretch;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.section-content {
+    width: 100%;
+}
+
+.info-card {
+    background-color: #f8f9fa;
+    border-radius: 1rem;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.info-card h3 {
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.info-card h4 {
+    font-size: 1.1em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.info-card ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-size: 0.95em;
+    color: #475569;
+}
+
+.info-card li {
+    margin-bottom: 8px;
+}
+
+.info-card p,
+.section-content p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #475569;
+}
+
+.info-card table,
+.section-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.info-card th,
+.info-card td,
+.section-content th,
+.section-content td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.info-card th,
+.section-content th {
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.disclaimer {
+    font-size: 0.85em;
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: color 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.footer-copyright {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.85em;
+    color: #6c757d;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 20px;
+}
+
+/* --- CHAKRA COLOR THEMES --- */
+
+/* 1. Muladhara (Red) */
+.chakra-red-theme { background-color: rgba(216, 49, 91, 0.07); }
+.chakra-red-theme .infographic-header { background-color: #D8315B; --header-bg: #D8315B; }
+.chakra-red-theme .section-title { color: #D8315B; border-bottom: 2px solid #e46e86; }
+.chakra-red-theme .info-card { border-left: 4px solid #D8315B; }
+.chakra-red-theme .info-card h3 { color: #D8315B; }
+.chakra-red-theme .info-card h4 { color: #e46e86; }
+.chakra-red-theme .info-card th { background-color: rgba(216, 49, 91, 0.1); color: #D8315B; }
+.chakra-red-theme .disclaimer { color: #D8315B; border: 1px solid #e46e86; background-color: rgba(216, 49, 91, 0.07); }
+
+/* 2. Svadhisthana (Orange) */
+.chakra-orange-theme { background-color: rgba(255, 165, 0, 0.07); }
+.chakra-orange-theme .infographic-header { background-color: #FFA500; --header-bg: #FFA500; }
+.chakra-orange-theme .section-title { color: #FFA500; border-bottom: 2px solid #ffc966; }
+.chakra-orange-theme .info-card { border-left: 4px solid #FFA500; }
+.chakra-orange-theme .info-card h3 { color: #FFA500; }
+.chakra-orange-theme .info-card h4 { color: #ffc966; }
+.chakra-orange-theme .info-card th { background-color: rgba(255, 165, 0, 0.1); color: #FFA500; }
+.chakra-orange-theme .disclaimer { color: #FFA500; border: 1px solid #ffc966; background-color: rgba(255, 165, 0, 0.07); }
+
+/* 3. Manipura (Yellow) */
+.chakra-yellow-theme { background-color: rgba(244, 193, 80, 0.07); }
+.chakra-yellow-theme .infographic-header { background-color: #F4C150; --header-bg: #F4C150; }
+.chakra-yellow-theme .section-title { color: #F4C150; border-bottom: 2px solid #f8d78c; }
+.chakra-yellow-theme .info-card { border-left: 4px solid #F4C150; }
+.chakra-yellow-theme .info-card h3 { color: #F4C150; }
+.chakra-yellow-theme .info-card h4 { color: #f8d78c; }
+.chakra-yellow-theme .info-card th { background-color: rgba(244, 193, 80, 0.1); color: #F4C150; }
+.chakra-yellow-theme .disclaimer { color: #F4C150; border: 1px solid #f8d78c; background-color: rgba(244, 193, 80, 0.07); }
+
+/* 4. Anahata (Green) */
+.chakra-green-theme { background-color: rgba(6, 214, 160, 0.07); }
+.chakra-green-theme .infographic-header { background-color: #06D6A0; --header-bg: #06D6A0; }
+.chakra-green-theme .section-title { color: #06D6A0; border-bottom: 2px solid #6afbe2; }
+.chakra-green-theme .info-card { border-left: 4px solid #06D6A0; }
+.chakra-green-theme .info-card h3 { color: #06D6A0; }
+.chakra-green-theme .info-card h4 { color: #6afbe2; }
+.chakra-green-theme .info-card th { background-color: rgba(6, 214, 160, 0.1); color: #06D6A0; }
+.chakra-green-theme .disclaimer { color: #06D6A0; border: 1px solid #6afbe2; background-color: rgba(6, 214, 160, 0.07); }
+
+/* 5. Vishuddha (Blue) */
+.chakra-blue-theme { background-color: rgba(62, 146, 204, 0.07); }
+.chakra-blue-theme .infographic-header { background-color: #3E92CC; --header-bg: #3E92CC; }
+.chakra-blue-theme .section-title { color: #3E92CC; border-bottom: 2px solid #82c0f2; }
+.chakra-blue-theme .info-card { border-left: 4px solid #3E92CC; }
+.chakra-blue-theme .info-card h3 { color: #3E92CC; }
+.chakra-blue-theme .info-card h4 { color: #82c0f2; }
+.chakra-blue-theme .info-card th { background-color: rgba(62, 146, 204, 0.1); color: #3E92CC; }
+.chakra-blue-theme .disclaimer { color: #3E92CC; border: 1px solid #82c0f2; background-color: rgba(62, 146, 204, 0.07); }
+
+/* 6. Ajna (Indigo/Purple) */
+.chakra-purple-theme { background-color: rgba(147, 112, 219, 0.07); }
+.chakra-purple-theme .infographic-header { background-color: #9370DB; --header-bg: #9370DB; }
+.chakra-purple-theme .section-title { color: #9370DB; border-bottom: 2px solid #c1aee8; }
+.chakra-purple-theme .info-card { border-left: 4px solid #9370DB; }
+.chakra-purple-theme .info-card h3 { color: #9370DB; }
+.chakra-purple-theme .info-card h4 { color: #c1aee8; }
+.chakra-purple-theme .info-card th { background-color: rgba(147, 112, 219, 0.1); color: #9370DB; }
+.chakra-purple-theme .disclaimer { color: #9370DB; border: 1px solid #c1aee8; background-color: rgba(147, 112, 219, 0.07); }
+
+/* 7. Sahasrara (Violet) */
+.chakra-violet-theme { background-color: rgba(138, 43, 226, 0.07); }
+.chakra-violet-theme .infographic-header { background-color: #8A2BE2; --header-bg: #8A2BE2; }
+.chakra-violet-theme .section-title { color: #8A2BE2; border-bottom: 2px solid #b784e8; }
+.chakra-violet-theme .info-card { border-left: 4px solid #8A2BE2; }
+.chakra-violet-theme .info-card h3 { color: #8A2BE2; }
+.chakra-violet-theme .info-card h4 { color: #b784e8; }
+.chakra-violet-theme .info-card th { background-color: rgba(138, 43, 226, 0.1); color: #8A2BE2; }
+.chakra-violet-theme .disclaimer { color: #8A2BE2; border: 1px solid #b784e8; background-color: rgba(138, 43, 226, 0.07); }
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+    .infographic-container {
+        border-radius: 0;
+        border: none;
+    }
+    .section {
+        padding: 20px;
+    }
+    .infographic-header {
+        font-size: 1.8em;
+    }
+    .section-title {
+        font-size: 1.5em;
+    }
+}
