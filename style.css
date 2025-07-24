@@ -32,7 +32,7 @@ body {
 }
 
 .infographic-header h1 {
-    font-size: 2.6em; /* Font size increased */
+    font-size: 2.6em;
     font-weight: 700;
     text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
     margin: 0;
@@ -86,11 +86,17 @@ body {
     width: 100%;
 }
 
+/* Grid layout for index page */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
 /* ==========================================================================
    Card Styles
    ========================================================================== */
 .info-card {
-    flex: 1 1 45%;
     min-width: 280px;
     background-color: #fdfdff;
     border-radius: 1rem;
@@ -196,15 +202,33 @@ body {
 .btn-violet { border-color: #8A2BE2; color: #8A2BE2; }
 .btn-violet:hover { background-color: #8A2BE2; color: white; }
 
+.btn-gray { border-color: #6c757d; color: #6c757d; }
+.btn-gray:hover { background-color: #6c757d; color: white; }
+
 /* ==========================================================================
-   Chakra Themes (for individual pages)
+   Page Themes
    ========================================================================== */
+
+/* Index Page Theme */
+.index-page-theme { background-color: #fffbe6; }
+.index-page-theme .infographic-header { background-color: #0A2463; --header-bg: #0A2463; }
+.index-page-theme .section-title { color: #0A2463; border-bottom: 2px solid #3E92CC; }
+
+/* General Info Page Theme */
+.chakra-gray-theme { background-color: #f8f9fa; }
+.chakra-gray-theme .infographic-header { background-color: #495057; --header-bg: #495057; }
+.chakra-gray-theme .section-title { color: #495057; border-bottom: 2px solid #adb5bd; }
+.chakra-gray-theme .info-card { border-left: 4px solid #adb5bd; }
+.chakra-gray-theme .info-card h3 { color: #495057; }
+.chakra-gray-theme .info-card h4 { color: #6c757d; }
+.chakra-gray-theme .info-card th { background-color: #e9ecef; color: #495057; }
+.chakra-gray-theme .disclaimer { color: #495057; border: 1px solid #adb5bd; background-color: #e9ecef; }
 
 /* 1. Muladhara (Red) */
 .chakra-red-theme { background-color: rgba(216, 49, 91, 0.07); }
 .chakra-red-theme .infographic-header { background-color: #D8315B; --header-bg: #D8315B; }
 .chakra-red-theme .section-title { color: #D8315B; border-bottom: 2px solid #e46e86; }
-.chakra-red-theme .info-card { border-left: 4px solid #D8315B; }
+.chakra-red-theme .info-card { border-left: 4px solid #D8315B; background-color: #fff; }
 .chakra-red-theme .info-card h3 { color: #D8315B; }
 .chakra-red-theme .info-card h4 { color: #e46e86; }
 .chakra-red-theme .info-card th { background-color: rgba(216, 49, 91, 0.1); color: #D8315B; }
@@ -214,7 +238,7 @@ body {
 .chakra-orange-theme { background-color: rgba(255, 165, 0, 0.07); }
 .chakra-orange-theme .infographic-header { background-color: #FFA500; --header-bg: #FFA500; }
 .chakra-orange-theme .section-title { color: #FFA500; border-bottom: 2px solid #ffc966; }
-.chakra-orange-theme .info-card { border-left: 4px solid #FFA500; }
+.chakra-orange-theme .info-card { border-left: 4px solid #FFA500; background-color: #fff; }
 .chakra-orange-theme .info-card h3 { color: #FFA500; }
 .chakra-orange-theme .info-card h4 { color: #ffc966; }
 .chakra-orange-theme .info-card th { background-color: rgba(255, 165, 0, 0.1); color: #FFA500; }
@@ -224,7 +248,7 @@ body {
 .chakra-yellow-theme { background-color: rgba(244, 193, 80, 0.07); }
 .chakra-yellow-theme .infographic-header { background-color: #F4C150; --header-bg: #F4C150; }
 .chakra-yellow-theme .section-title { color: #F4C150; border-bottom: 2px solid #f8d78c; }
-.chakra-yellow-theme .info-card { border-left: 4px solid #F4C150; }
+.chakra-yellow-theme .info-card { border-left: 4px solid #F4C150; background-color: #fff; }
 .chakra-yellow-theme .info-card h3 { color: #F4C150; }
 .chakra-yellow-theme .info-card h4 { color: #f8d78c; }
 .chakra-yellow-theme .info-card th { background-color: rgba(244, 193, 80, 0.1); color: #F4C150; }
@@ -234,7 +258,7 @@ body {
 .chakra-green-theme { background-color: rgba(6, 214, 160, 0.07); }
 .chakra-green-theme .infographic-header { background-color: #06D6A0; --header-bg: #06D6A0; }
 .chakra-green-theme .section-title { color: #06D6A0; border-bottom: 2px solid #6afbe2; }
-.chakra-green-theme .info-card { border-left: 4px solid #06D6A0; }
+.chakra-green-theme .info-card { border-left: 4px solid #06D6A0; background-color: #fff; }
 .chakra-green-theme .info-card h3 { color: #06D6A0; }
 .chakra-green-theme .info-card h4 { color: #6afbe2; }
 .chakra-green-theme .info-card th { background-color: rgba(6, 214, 160, 0.1); color: #06D6A0; }
@@ -244,7 +268,7 @@ body {
 .chakra-blue-theme { background-color: rgba(62, 146, 204, 0.07); }
 .chakra-blue-theme .infographic-header { background-color: #3E92CC; --header-bg: #3E92CC; }
 .chakra-blue-theme .section-title { color: #3E92CC; border-bottom: 2px solid #82c0f2; }
-.chakra-blue-theme .info-card { border-left: 4px solid #3E92CC; }
+.chakra-blue-theme .info-card { border-left: 4px solid #3E92CC; background-color: #fff; }
 .chakra-blue-theme .info-card h3 { color: #3E92CC; }
 .chakra-blue-theme .info-card h4 { color: #82c0f2; }
 .chakra-blue-theme .info-card th { background-color: rgba(62, 146, 204, 0.1); color: #3E92CC; }
@@ -254,7 +278,7 @@ body {
 .chakra-purple-theme { background-color: rgba(147, 112, 219, 0.07); }
 .chakra-purple-theme .infographic-header { background-color: #9370DB; --header-bg: #9370DB; }
 .chakra-purple-theme .section-title { color: #9370DB; border-bottom: 2px solid #c1aee8; }
-.chakra-purple-theme .info-card { border-left: 4px solid #9370DB; }
+.chakra-purple-theme .info-card { border-left: 4px solid #9370DB; background-color: #fff; }
 .chakra-purple-theme .info-card h3 { color: #9370DB; }
 .chakra-purple-theme .info-card h4 { color: #c1aee8; }
 .chakra-purple-theme .info-card th { background-color: rgba(147, 112, 219, 0.1); color: #9370DB; }
@@ -264,23 +288,23 @@ body {
 .chakra-violet-theme { background-color: rgba(138, 43, 226, 0.07); }
 .chakra-violet-theme .infographic-header { background-color: #8A2BE2; --header-bg: #8A2BE2; }
 .chakra-violet-theme .section-title { color: #8A2BE2; border-bottom: 2px solid #b784e8; }
-.chakra-violet-theme .info-card { border-left: 4px solid #8A2BE2; }
+.chakra-violet-theme .info-card { border-left: 4px solid #8A2BE2; background-color: #fff; }
 .chakra-violet-theme .info-card h3 { color: #8A2BE2; }
 .chakra-violet-theme .info-card h4 { color: #b784e8; }
 .chakra-violet-theme .info-card th { background-color: rgba(138, 43, 226, 0.1); color: #8A2BE2; }
 .chakra-violet-theme .disclaimer { color: #8A2BE2; border: 1px solid #b784e8; background-color: rgba(138, 43, 226, 0.07); }
 
 /* ==========================================================================
-   Chakra Card Styles (for index page)
+   Card Styles (for index page)
    ========================================================================== */
-.chakra-card-red { background-color: rgba(216, 49, 91, 0.07); border-left: 4px solid #D8315B; border-right: 4px solid #D8315B; }
-.chakra-card-orange { background-color: rgba(255, 165, 0, 0.07); border-left: 4px solid #FFA500; border-right: 4px solid #FFA500; }
-.chakra-card-yellow { background-color: rgba(244, 193, 80, 0.07); border-left: 4px solid #F4C150; border-right: 4px solid #F4C150; }
-.chakra-card-green { background-color: rgba(6, 214, 160, 0.07); border-left: 4px solid #06D6A0; border-right: 4px solid #06D6A0; }
-.chakra-card-blue { background-color: rgba(62, 146, 204, 0.07); border-left: 4px solid #3E92CC; border-right: 4px solid #3E92CC; }
-.chakra-card-purple { background-color: rgba(147, 112, 219, 0.07); border-left: 4px solid #9370DB; border-right: 4px solid #9370DB; }
-.chakra-card-violet { background-color: rgba(138, 43, 226, 0.07); border-left: 4px solid #8A2BE2; border-right: 4px solid #8A2BE2; }
-.info-card.border-gray { border-left: 4px solid #adb5bd; border-right: 4px solid #adb5bd; }
+.chakra-card-red { border-left: 4px solid #D8315B; border-right: 4px solid #D8315B; }
+.chakra-card-orange { border-left: 4px solid #FFA500; border-right: 4px solid #FFA500; }
+.chakra-card-yellow { border-left: 4px solid #F4C150; border-right: 4px solid #F4C150; }
+.chakra-card-green { border-left: 4px solid #06D6A0; border-right: 4px solid #06D6A0; }
+.chakra-card-blue { border-left: 4px solid #3E92CC; border-right: 4px solid #3E92CC; }
+.chakra-card-purple { border-left: 4px solid #9370DB; border-right: 4px solid #9370DB; }
+.chakra-card-violet { border-left: 4px solid #8A2BE2; border-right: 4px solid #8A2BE2; }
+.chakra-card-gray { border-left: 4px solid #adb5bd; border-right: 4px solid #adb5bd; }
 
 /* ==========================================================================
    Disclaimer & Footer
@@ -305,6 +329,7 @@ body {
     body { padding: 0; }
     .infographic-container { border-radius: 0; border: none; }
     .section { padding: 20px; }
+    .card-grid { grid-template-columns: 1fr; }
     .info-card { flex-basis: 100%; }
     .infographic-header h1 { font-size: 1.8em; }
     .section-title { font-size: 1.5em; }
