@@ -93,6 +93,10 @@ body {
     gap: 25px;
 }
 
+.card-grid .grid-span-all {
+    grid-column: 1 / -1; /* Face ca elementul să ocupe toate coloanele disponibile în grid */
+}
+
 /* ==========================================================================
    Card Styles
    ========================================================================== */
@@ -163,11 +167,6 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.card-grid .grid-span-all {
-    grid-column: 1 / -1; /* Face ca elementul să ocupe toate coloanele disponibile în grid */
-}
-
-
 /* ==========================================================================
    Button Styles
    ========================================================================== */
@@ -206,6 +205,9 @@ body {
 
 .btn-violet { border-color: #8A2BE2; color: #8A2BE2; }
 .btn-violet:hover { background-color: #8A2BE2; color: white; }
+
+.btn-gold { border-color: #FFB300; color: #FFB300; }
+.btn-gold:hover { background-color: #FFB300; color: white; }
 
 .btn-gray { border-color: #6c757d; color: #6c757d; }
 .btn-gray:hover { background-color: #6c757d; color: white; }
@@ -299,6 +301,17 @@ body {
 .chakra-violet-theme .info-card th { background-color: rgba(138, 43, 226, 0.1); color: #8A2BE2; }
 .chakra-violet-theme .disclaimer { color: #8A2BE2; border: 1px solid #b784e8; background-color: rgba(138, 43, 226, 0.07); }
 
+/* 8. Vyapini (Gold) */
+.chakra-gold-theme { background-color: rgba(255, 215, 0, 0.07); }
+.chakra-gold-theme .infographic-header { background-color: #FFB300; --header-bg: #FFB300; }
+.chakra-gold-theme .section-title { color: #FFB300; border-bottom: 2px solid #FFD54F; }
+.chakra-gold-theme .info-card { border-left: 4px solid #FFB300; background-color: #fff; }
+.chakra-gold-theme .info-card h3 { color: #FFB300; }
+.chakra-gold-theme .info-card h4 { color: #FFD54F; }
+.chakra-gold-theme .info-card th { background-color: rgba(255, 215, 0, 0.1); color: #FFB300; }
+.chakra-gold-theme .disclaimer { color: #FFB300; border: 1px solid #FFD54F; background-color: rgba(255, 215, 0, 0.07); }
+
+
 /* ==========================================================================
    Card Styles (for index page)
    ========================================================================== */
@@ -309,6 +322,7 @@ body {
 .chakra-card-blue { border-left: 4px solid #3E92CC; border-right: 4px solid #3E92CC; }
 .chakra-card-purple { border-left: 4px solid #9370DB; border-right: 4px solid #9370DB; }
 .chakra-card-violet { border-left: 4px solid #8A2BE2; border-right: 4px solid #8A2BE2; }
+.chakra-card-gold { border-left: 4px solid #FFB300; border-right: 4px solid #FFB300; }
 .chakra-card-gray { border-left: 4px solid #adb5bd; border-right: 4px solid #adb5bd; }
 
 /* ==========================================================================
