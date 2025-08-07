@@ -163,6 +163,11 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.card-grid .grid-span-all {
+    grid-column: 1 / -1; /* Face ca elementul să ocupe toate coloanele disponibile în grid */
+}
+
+
 /* ==========================================================================
    Button Styles
    ========================================================================== */
